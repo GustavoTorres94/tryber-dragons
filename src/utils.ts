@@ -1,6 +1,6 @@
 function getRandomInt(min: number, max: number) {
   const newMin = Math.ceil(min);
-  const newMax = Math.floor(max);
+  const newMax = Math.floor(max);a
   return Math.floor(Math.random() * (newMax - newMin)) + newMin;
 }
 
