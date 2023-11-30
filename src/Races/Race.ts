@@ -4,8 +4,6 @@ abstract class Race {
   constructor(private _name: string, private _dexterity:number) {
     this._name = _name;
     this._dexterity = _dexterity;
-    
-    Race.createdRacesInstances();
   }
   
   abstract get maxLifePoints(): number;

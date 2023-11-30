@@ -7,7 +7,7 @@ class Dwarf extends Race {
   constructor(name: string, dexterity: number) {
     super(name, dexterity);
     this._maxLifePoints = 80;
-    Dwarf.createdRacesInstances();
+    Dwarf.dwarfInstances += 1;
   }
 
   get maxLifePoints(): number {
@@ -15,7 +15,6 @@ class Dwarf extends Race {
   }
 
   static override createdRacesInstances(): number {
-    Dwarf.dwarfInstances += 1;
     return Dwarf.dwarfInstances;
   }
 }

@@ -7,7 +7,7 @@ class Orc extends Race {
   constructor(name: string, dexterity: number) {
     super(name, dexterity);
     this._maxLifePoints = 74;
-    Race.createdRacesInstances();
+    Orc.orcInstances += 1;
   }
 
   get maxLifePoints(): number {
@@ -15,7 +15,6 @@ class Orc extends Race {
   }
 
   static override createdRacesInstances(): number {
-    Orc.orcInstances += 1;
     return Orc.orcInstances;
   }
 }

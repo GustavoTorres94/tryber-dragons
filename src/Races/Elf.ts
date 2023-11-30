@@ -7,7 +7,7 @@ class Elf extends Race {
   constructor(name: string, dexterity: number) {
     super(name, dexterity);
     this._maxLifePoints = 99;
-    Elf.createdRacesInstances();
+    Elf.elfInstances += 1;
   }
 
   get maxLifePoints(): number {
@@ -15,7 +15,6 @@ class Elf extends Race {
   }
 
   static override createdRacesInstances(): number {
-    Elf.elfInstances += 1;
     return Elf.elfInstances;
   }
 }

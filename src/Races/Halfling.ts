@@ -7,7 +7,7 @@ class Halfling extends Race {
   constructor(name: string, dexterity: number) {
     super(name, dexterity);
     this._maxLifePoints = 60;
-    Halfling.createdRacesInstances();
+    Halfling.halflingInstances += 1;
   }
 
   get maxLifePoints(): number {
@@ -15,7 +15,6 @@ class Halfling extends Race {
   }
 
   static override createdRacesInstances(): number {
-    Halfling.halflingInstances += 1;
     return Halfling.halflingInstances;
   }
 }
