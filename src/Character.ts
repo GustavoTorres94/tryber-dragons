@@ -52,8 +52,10 @@ class Character implements Fighter {
 
   public get energy(): Energy | undefined {
     if (this._energy) {
-      const { amount, type_ } = this._energy;
-      return { amount, type_ };
+      return { 
+        amount: this._energy.amount,
+        type_: this._energy.type_,
+      };
     }
     return undefined;    
   }
